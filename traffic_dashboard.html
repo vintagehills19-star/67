@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Dashboard - 67 Calculator</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S840DNLG3G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-S840DNLG3G');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #888;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .status-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .status-box.connected {
+            border-left-color: #28a745;
+            background: #f0f8f5;
+        }
+
+        .status-box strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #667eea;
+        }
+
+        .status-box.connected strong {
+            color: #28a745;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-card h3 {
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .info-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-section h3 {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-section p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .connected-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Traffic Dashboard</h1>
+        <p class="subtitle">Real-time visitor tracking for your 67 Calculator</p>
+
+        <div class="status-box connected">
+            <strong>✅ Google Analytics Connected <span class="connected-badge">ACTIVE</span></strong>
+            Your website is now tracking all visitors in real-time!
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Status</h3>
+                <div class="stat-number">🟢</div>
+            </div>
+            <div class="stat-card">
+                <h3>Tracking</h3>
+                <div class="stat-number">✓</div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>📈 How to View Your Traffic</h3>
+            <p>Visit <strong><a href="https://analytics.google.com" target="_blank">analytics.google.com</a></strong> and sign in with your Google account to see:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Total number of visitors</li>
+                <li>When they visited</li>
+                <li>What device they used</li>
+                <li>Where they're from</li>
+                <li>Time on page</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h3>🎯 What's Tracking</h3>
+            <p>Every visit to your 67 Calculator website is automatically tracked and logged in Google Analytics. You'll see real-time data as visitors come in!</p>
+        </div>
+
+        <div class="info-section">
+            <h3>🔐 Your Measurement ID</h3>
+            <p><code style="background: white; padding: 2px 6px; border-radius: 3px; font-family: monospace;">G-S840DNLG3G</code></p>
+            <p style="margin-top: 10px; font-size: 12px; color: #999;">This ID is connected to your Google Analytics account.</p>
+        </div>
+
+        <a href="https://67-git-main-vintagehills19-stars-projects.vercel.app" class="button">← Back to 67 Calculator</a>
+
+        <div class="back-link">
+            <a href="https://analytics.google.com" target="_blank">View Analytics Dashboard →</a>
+        </div>
+    </div>
+</body>
+</html>
